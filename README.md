@@ -78,6 +78,16 @@ graph TD
 
 ---
 
+## Valorisation de l'IA Symbolique (Livrable Ontologie)
+
+L'apport de l'ontologie dans ORIENT'IA est démontré par trois capacités uniques intégrées au prototype :
+
+1. **Vérification de Conformité Administrative** : Contrairement au modèle ML qui fonctionne par probabilités, l'ontologie applique les règles strictes de l'ISPM. Elle détecte immédiatement si une série de Bac est officiellement autorisée pour un parcours, agissant comme un garde-fou contre les recommandations statistiquement probables mais administrativement impossibles.
+2. **Explicabilité Causale (XAI)** : Le système utilise le graphe pour justifier une recommandation par des faits : *"Ce parcours est suggéré car il enseigne la matière X que vous préférez et développe la compétence Y que vous possédez"*.
+3. **Raisonnement Multi-étape** : Capacité à suggérer des débouchés métiers en traversant le graphe : `Étudiant -> Matière Préférée -> Parcours Enseigné -> Métier Cible`.
+
+---
+
 ## Documentations Détaillées
 
 Pour une compréhension approfondie de chaque composante, veuillez consulter les documentations spécifiques :
