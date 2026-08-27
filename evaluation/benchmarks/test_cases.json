@@ -71,7 +71,7 @@
       "interets": ["IA", "Programmation"],
       "serie_bac": "S"
     },
-    "expected_recommendation": "IGGLIA",
+    "expected_output_contains": ["IGGLIA", "Informatique de Gestion"],
     "min_confidence": 0.7
   },
   {
@@ -83,7 +83,7 @@
       "interets": ["Santé", "Médicaments"],
       "serie_bac": "D"
     },
-    "expected_recommendation": "PIP",
+    "expected_output_contains": ["PIP", "Pharmacologie"],
     "min_confidence": 0.7
   },
   {
@@ -95,7 +95,7 @@
       "interets": ["Architecture", "Bâtiment"],
       "serie_bac": "C"
     },
-    "expected_recommendation": "GCA",
+    "expected_output_contains": ["GCA", "Génie Civil"],
     "min_confidence": 0.7
   },
   {
@@ -107,7 +107,7 @@
       "interets": ["Droit", "Justice"],
       "serie_bac": "A1"
     },
-    "expected_recommendation": "DTJA",
+    "expected_output_contains": ["DTJA", "Juridique"],
     "min_confidence": 0.7
   },
   {
@@ -119,7 +119,7 @@
       "interets": ["Voyage", "Hôtellerie"],
       "serie_bac": "A2"
     },
-    "expected_recommendation": "TEH",
+    "expected_output_contains": ["TEH", "Tourisme"],
     "min_confidence": 0.7
   },
   {
@@ -131,7 +131,7 @@
       "interets": ["Gestion", "Banque"],
       "serie_bac": "OSE"
     },
-    "expected_recommendation": "FIC",
+    "expected_output_contains": ["FIC", "Finance", "Comptabilité"],
     "min_confidence": 0.6
   },
   {
