@@ -29,6 +29,23 @@
 | RABEMANANTSOA Fanilonombana Diana | ESIIA5 | 13 | [DianaaRabe](https://github.com/DianaaRabe) |
 | RAZANAJATOVO ANDRIANIMERINA Kinasaela | ESIIA5 | 16 | [Beeckss](https://github.com/Beeckss) |
 | RASOANAIVO Aro Itokiana | ESIIA5 | 20 | [RAIRas-Design](https://github.com/RAIRas-Design) |
+
+---
+
+## Sommaire
+
+*   [Présentation du Projet](#orientia--système-hybride-dorientation-pédagogique-ispm)
+*   [Accès Rapide (Démonstration & Vidéo)](#démonstration-fonctionnelle-livrable-14)
+*   [Architecture Technique](#architecture-du-projet)
+*   [Schéma d'Architecture Logicielle](#schéma-darchitecture-logicielle-livrable-11)
+*   [Graphe de Connaissance (Ontologie)](#graphe-de-connaissance-ontologie)
+*   [Valorisation de l'IA Symbolique](#valorisation-de-lia-symbolique-livrable-ontologie)
+*   [Documentations Détaillées](#documentations-détaillées)
+*   [Installation et Exécution](#installation-et-exécution-livrable-2)
+*   [Index des Livrables](#index-des-livrables)
+*   [Limites, Biais et Risques](#limites-biais-et-risques-livrable-12)
+*   [Mention Obligatoire](#mention-obligatoire)
+
 ---
 
 # ORIENT’IA — Système Hybride d'Orientation Pédagogique (ISPM)
