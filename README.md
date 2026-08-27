@@ -145,7 +145,7 @@ npm run dev
 | 11 | Schéma d'architecture | Ce fichier README.md |
 | 12 | Limites, biais et risques | Ce fichier README.md |
 | 13 | Vidéo de présentation | [Lien Google Drive](https://drive.google.com/drive/folders/10kKB1Nya73c6gPjsSsDvgGgaHMki_MVc?usp=sharing) |
-| 14 | Démonstration fonctionnelle | [orientia-steel.vercel.app](https://orientia-ispm.vercel.app/) |
+| 14 | Démonstration fonctionnelle | [orientia-ispm.vercel.app](https://orientia-ispm.vercel.app/) |
 
 ## Limites, Biais et Risques (Livrable 12)
 
