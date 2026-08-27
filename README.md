@@ -40,6 +40,11 @@
 L'interface utilisateur est accessible en ligne à l'adresse suivante :
 **[orient'IA](https://orientia-steel.vercel.app/)**
 
+## Vidéo de Présentation (Livrable 13)
+
+La vidéo de démonstration **(4:10 minutes)** présentant le système en fonctionnement est disponible ici :
+**[Regarder la vidéo](https://drive.google.com/drive/folders/10kKB1Nya73c6gPjsSsDvgGgaHMki_MVc?usp=sharing)**
+
 ## Architecture du Projet
 
 ```text
@@ -137,7 +142,10 @@ npm run dev
 | 8 | Modèle entraîné | ml/randomForest/models/classifier_parcours.pkl |
 | 9 | Jeu d'évaluation | evaluation/benchmarks/test_cases.json |
 | 10 | Résultats mesurés | evaluation/results/benchmark_report.json |
-| 12 | Limites et Risques | Voir section ci-dessous |
+| 11 | Schéma d'architecture | Ce fichier README.md |
+| 12 | Limites, biais et risques | Ce fichier README.md |
+| 13 | Vidéo de présentation | [Lien Google Drive](https://drive.google.com/drive/folders/10kKB1Nya73c6gPjsSsDvgGgaHMki_MVc?usp=sharing) |
+| 14 | Démonstration fonctionnelle | [orientia-steel.vercel.app](https://orientia-steel.vercel.app/) |
 
 ## Limites, Biais et Risques (Livrable 12)
 
