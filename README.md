@@ -33,7 +33,12 @@
 
 # ORIENT’IA — Système Hybride d'Orientation Pédagogique (ISPM)
 
-**ORIENT’IA** est une plateforme décisionnelle intelligente conçue pour accompagner les bacheliers malgaches dans leur choix de parcours à l'ISPM. Elle combine la puissance statistique du Machine Learning, la rigueur logique de l'IA Symbolique (Ontologie) et la fiabilité documentaire du RAG.
+**ORIENT’IA** est une plateforme décisionnelle intelligente conçue pour accompagner les bacheliers malgaches, ainsi que les étudiants en reconversion ou souhaitant changer de filière, dans leur choix de parcours à l'ISPM. Elle combine la puissance statistique du Machine Learning, la rigueur logique de l'IA Symbolique (Ontologie) et la fiabilité documentaire du RAG.
+
+## Démonstration Fonctionnelle (Livrable 14)
+
+L'interface utilisateur est accessible en ligne à l'adresse suivante :
+**[https://orientia-steel.vercel.app/](https://orientia-steel.vercel.app/)**
 
 ## Architecture du Projet
 
