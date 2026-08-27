@@ -130,6 +130,10 @@ Pour une compréhension approfondie de chaque composante, veuillez consulter les
 ## Installation et Exécution (Livrable 2)
 
 ### 1. Backend & ML (FastAPI)
+
+Le backend peut être exécuté localement pour le développement ou utiliser l'API officiellement hébergée sur Render : **[https://fastapifororientia.onrender.com](https://fastapifororientia.onrender.com)**.
+
+#### Exécution locale :
 ```bash
 cd ml/randomForest
 python3 -m venv venv
