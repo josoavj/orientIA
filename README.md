@@ -38,7 +38,7 @@
 ## Démonstration Fonctionnelle (Livrable 14)
 
 L'interface utilisateur est accessible en ligne à l'adresse suivante :
-**[https://orientia-steel.vercel.app/](https://orientia-steel.vercel.app/)**
+**[orient'IA](https://orientia-steel.vercel.app/)**
 
 ## Architecture du Projet
 
