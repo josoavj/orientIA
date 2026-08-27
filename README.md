@@ -55,7 +55,7 @@
 ## Démonstration Fonctionnelle (Livrable 14)
 
 L'interface utilisateur est accessible en ligne à l'adresse suivante :
-**[orient'IA](https://orientia-steel.vercel.app/)**
+**[orient'IA](https://orientia-ispm.vercel.app/)**
 
 ## Vidéo de Présentation (Livrable 13)
 
@@ -135,7 +135,7 @@ cd ml/randomForest
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python3 main.py
+uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ```
 
 ### 2. Frontend (Next.js)
