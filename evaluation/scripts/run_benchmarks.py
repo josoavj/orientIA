@@ -7,7 +7,7 @@ from datetime import datetime
 # Configuration
 TEST_CASES_PATH = "../benchmarks/test_cases.json"
 RESULTS_PATH = "../results/benchmark_report.json"
-API_URL = "http://localhost:8000/chat"  # URL du backend FastAPI
+API_URL = "https://fastapifororientia.onrender.com/chat"  # URL réelle sur Render
 
 def run_benchmarks():
     if not os.path.exists(TEST_CASES_PATH):
@@ -21,44 +21,46 @@ def run_benchmarks():
     total_latency = 0
     passed_count = 0
 
-    print(f"Lancement du benchmark ORIENT'IA ({len(test_cases)} cas)...")
+    print(f"Lancement du benchmark ORIENT'IA sur API distante ({len(test_cases)} cas)...")
 
     for tc in test_cases:
-        print(f"Running {tc['id']} [{tc['category']}]...", end=" ", flush=True)
+        print(f"Running {tc['id']}...", end=" ", flush=True)
         
         start_time = time.time()
         status = "failed"
         answer = ""
         
         try:
-            # Préparation du payload selon le type de test
             payload = {
                 "message": tc.get("input", ""),
                 "profil_candidat": tc.get("profile", None),
                 "top_k": 5
             }
             
-            # Appel API (simulation si API éteinte pour le script de démo)
-            try:
-                response = requests.post(API_URL, json=payload, timeout=10)
-                if response.status_code == 200:
-                    answer = response.json().get("answer", "")
-                else:
-                    answer = f"Error {response.status_code}"
-            except:
-                answer = "Simulated response for test " + tc["id"] # Fallback simulation
-
+            response = requests.post(API_URL, json=payload, timeout=30)
+            if response.status_code == 200:
+                answer = response.json().get("answer", "")
+            else:
+                answer = f"API Error {response.status_code}: {response.text[:100]}"
+                
             latency = int((time.time() - start_time) * 1000)
             total_latency += latency
 
-            # Vérification basique (contient les mots clés attendus)
+            # Vérification intelligente
             expected = tc.get("expected_output_contains", [])
             if not expected and "expected_recommendation" in tc:
                 expected = [tc["expected_recommendation"]]
             
-            if any(word.lower() in answer.lower() for word in expected):
-                status = "passed"
-                passed_count += 1
+            if answer and not answer.startswith("API Error"):
+                matches = [word for word in expected if word.lower() in answer.lower()]
+                # On valide si au moins UN mot-clé important est trouvé (plus réaliste pour du texte narratif)
+                if len(matches) > 0:
+                    status = "passed"
+                    passed_count += 1
+                else:
+                    print(f"\n   [FAILED] Attendu: {expected} | Reçu: '{answer[:100]}...'")
+            elif answer.startswith("API Error"):
+                print(f"\n   [ERROR] {answer}")
             
             results.append({
                 "id": tc["id"],
@@ -71,7 +73,8 @@ def run_benchmarks():
             print(f"[{status.upper()}] ({latency}ms)")
 
         except Exception as e:
-            print(f"[ERROR] {str(e)}")
+            print(f"[CONNECTION ERROR] {str(e)}")
+            results.append({"id": tc["id"], "status": "error", "error": str(e)})
 
     # Rapport Final
     report = {
@@ -89,7 +92,7 @@ def run_benchmarks():
     with open(RESULTS_PATH, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
 
-    print(f"\n✅ Benchmark terminé. Rapport généré dans {RESULTS_PATH}")
+    print(f"\nBenchmark terminé. Rapport généré dans {RESULTS_PATH}")
     print(f"Accuracy: {report['summary']['accuracy']}% | Latence Moyenne: {report['summary']['avg_latency_ms']}ms")
 
 if __name__ == "__main__":
