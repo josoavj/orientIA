@@ -72,6 +72,24 @@ graph TD
     G & H & I --> J[Réponse Explicable & Justifiée]
 ```
 
+## Graphe de Connaissance (Ontologie)
+
+![Graphe de Connaissance](https://github.com/josoavj/orientIA/blob/master/ml/iasymbolique/ontologie/docs/Graphe%20de%20Connaissance.png?raw=true)
+
+---
+
+## Documentations Détaillées
+
+Pour une compréhension approfondie de chaque composante, veuillez consulter les documentations spécifiques :
+
+*   **[Dataset Synthétique](Data/Dataset-synthétique/orientationDatasetProfile/docs/DOCUMENTATION.md)** : Méthode de génération, hypothèses et biais du jeu de données de 1600 profils.
+*   **[Ontologie & IA Symbolique](ml/iasymbolique/ontologie/docs/ONTOLOGY.md)** : Conception formelle du graphe de connaissances et logique de raisonnement.
+*   **[Modèle ML Random Forest](ml/randomForest/MODEL_DOCUMENTATION.md)** : Démarche scientifique, entraînement et mesures de performance du classifieur.
+*   **[Système RAG](ml/randomForest/RAG_DOCUMENTATION.md)** : Pipeline d'indexation vectorielle et stratégie de recherche hybride.
+*   **[Enquête Réelle](Data/Enquête/README.md)** : Registre de collecte, protocole d'anonymisation et analyse des réponses réelles.
+
+---
+
 ## Installation et Exécution (Livrable 2)
 
 ### 1. Backend & ML (FastAPI)
@@ -109,7 +127,7 @@ npm run dev
 ## Limites, Biais et Risques (Livrable 12)
 
 ### 1. Limites Techniques
-*   **Volume de l'enquête** : L'échantillon réel (~100 réponses) est statistiquement plus faible que le dataset synthétique.
+*   **Volume de l'enquête** : L'échantillon réel (~100 réponses) est statistiquement plus faible que le dataset synthétique. Les intervalles de confiance sont documentés.
 *   **Dépendance API** : Le système nécessite une connexion active aux services d'inférence (Groq) pour la partie générative.
 
 ### 2. Biais Identifiés
