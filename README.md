@@ -29,6 +29,23 @@
 | RABEMANANTSOA Fanilonombana Diana | ESIIA5 | 13 | [DianaaRabe](https://github.com/DianaaRabe) |
 | RAZANAJATOVO ANDRIANIMERINA Kinasaela | ESIIA5 | 16 | [Beeckss](https://github.com/Beeckss) |
 | RASOANAIVO Aro Itokiana | ESIIA5 | 20 | [RAIRas-Design](https://github.com/RAIRas-Design) |
+
+---
+
+## Sommaire
+
+*   [Présentation du Projet](#orientia--système-hybride-dorientation-pédagogique-ispm)
+*   [Accès Rapide (Démonstration & Vidéo)](#démonstration-fonctionnelle-livrable-14)
+*   [Architecture Technique](#architecture-du-projet)
+*   [Schéma d'Architecture Logicielle](#schéma-darchitecture-logicielle-livrable-11)
+*   [Graphe de Connaissance (Ontologie)](#graphe-de-connaissance-ontologie)
+*   [Valorisation de l'IA Symbolique](#valorisation-de-lia-symbolique-livrable-ontologie)
+*   [Documentations Détaillées](#documentations-détaillées)
+*   [Installation et Exécution](#installation-et-exécution-livrable-2)
+*   [Index des Livrables](#index-des-livrables)
+*   [Limites, Biais et Risques](#limites-biais-et-risques-livrable-12)
+*   [Mention Obligatoire](#mention-obligatoire)
+
 ---
 
 # ORIENT’IA — Système Hybride d'Orientation Pédagogique (ISPM)
@@ -38,7 +55,7 @@
 ## Démonstration Fonctionnelle (Livrable 14)
 
 L'interface utilisateur est accessible en ligne à l'adresse suivante :
-**[orient'IA](https://orientia-steel.vercel.app/)**
+**[orient'IA](https://orientia-ispm.vercel.app/)**
 
 ## Vidéo de Présentation (Livrable 13)
 
@@ -113,12 +130,16 @@ Pour une compréhension approfondie de chaque composante, veuillez consulter les
 ## Installation et Exécution (Livrable 2)
 
 ### 1. Backend & ML (FastAPI)
+
+Le backend peut être exécuté localement pour le développement ou utiliser l'API officiellement hébergée sur Render : **[https://fastapifororientia.onrender.com](https://fastapifororientia.onrender.com)**.
+
+#### Exécution locale :
 ```bash
 cd ml/randomForest
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python3 main.py
+uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ```
 
 ### 2. Frontend (Next.js)
